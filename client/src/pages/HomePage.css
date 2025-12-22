@@ -1,0 +1,17 @@
+.home-page {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+}
+
+.site-footer {
+  padding: 60px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  background: rgba(10, 10, 10, 0.8);
+}
+
+.site-footer p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+

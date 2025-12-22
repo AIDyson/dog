@@ -1,0 +1,149 @@
+.country-ranking-page {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+}
+
+.country-ranking-container {
+  padding: 40px 0 80px;
+}
+
+.country-ranking-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.country-flag {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 215, 0, 0.1);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffd700;
+}
+
+.country-ranking-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.country-ranking-header p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.country-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.country-stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+}
+
+.country-stat-card .stat-value {
+  display: block;
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.country-stat-card .stat-label {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.country-ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.country-ranking-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 100px 100px 1fr auto auto auto;
+  gap: 24px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.country-ranking-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2);
+}
+
+.ranking-item-rank {
+  text-align: center;
+}
+
+.rank-number {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffd700;
+  margin-bottom: 4px;
+}
+
+.rank-label {
+  display: block;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ranking-item-global {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 20px;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  border-radius: 12px;
+  min-width: 120px;
+}
+
+.global-rank-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.global-rank-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffd700;
+}
+

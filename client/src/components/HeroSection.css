@@ -1,0 +1,564 @@
+.hero-section-new {
+  padding: 80px 0 60px;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 径向光晕背景效果 */
+.hero-section-new::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+  padding: 10px 18px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+
+.hero-content-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* 左侧内容区 */
+.hero-left {
+  padding-top: 20px;
+}
+
+.hero-main-title {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.05;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.hero-highlight {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+
+.hero-description {
+  font-size: 17px;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.hero-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #000;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* KPI网格 - 3列 */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.hero-stat-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.hero-stat-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 215, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.stat-content-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.stat-content-hero p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  font-weight: 500;
+  order: 1;
+}
+
+.stat-content-hero h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  order: 2;
+}
+
+.stat-sub-hero {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  order: 3;
+}
+
+.stat-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 215, 0, 0.08);
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-icon-hero {
+  width: 22px;
+  height: 22px;
+  color: #ffd700;
+}
+
+/* 右侧展示卡 */
+.hero-right {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.top-dog-card {
+  position: relative;
+  width: 100%;
+  height: 580px;
+  border-radius: 28px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.8), -20px -20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* 背景层 - 使用 ::after 伪元素 */
+.top-dog-card::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  z-index: 2;
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(24px);
+  border-radius: 24px;
+  overflow: hidden;
+  outline: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Blob 动画效果 - 使用 ::before 伪元素 */
+.top-dog-card::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: rgba(255, 215, 0, 0.6);
+  opacity: 1;
+  filter: blur(40px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+.top-dog-image-wrapper {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  overflow: hidden;
+  z-index: 3;
+  border-radius: 24px;
+}
+
+.top-dog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* 顶部暗色渐变 */
+.top-dog-header {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  z-index: 10;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  backdrop-filter: blur(8px);
+}
+
+.weekly-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 215, 0, 0.15);
+  backdrop-filter: blur(16px);
+  color: #ffd700;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.top-dog-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-action-btn {
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon-action-btn:hover {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.5);
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+/* 左上角信息区域 - 直接显示文字，无容器 */
+.dog-top-info-text {
+  position: absolute;
+  top: 75px;
+  left: 29px;
+  z-index: 10;
+  color: #fff;
+}
+
+.dog-name-age-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.dog-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.9);
+}
+
+.dog-age {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+.dog-breed-country-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.breed-value,
+.country-value {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.separator {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9);
+}
+
+.dog-tags-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dog-tag {
+  background: rgba(255, 215, 0, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  color: #ffd700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* 中间区域 - 分数和投票 */
+.dog-middle-info {
+  position: absolute;
+  top: 311px;
+  left: 22px;
+  right: 25px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 18px;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.score-votes-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.community-score-area {
+  flex: 1;
+}
+
+.score-label {
+  display: block;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.score-display {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.score-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffd700;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+  line-height: 1;
+}
+
+.score-unit {
+  font-size: 16px;
+  color: rgba(255, 215, 0, 0.9);
+  font-weight: 500;
+}
+
+.votes-area {
+  text-align: right;
+}
+
+.votes-label {
+  display: block;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.votes-number {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+/* 底部区域 - 主人故事 */
+.dog-bottom-info {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 18px;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.dog-story {
+  background: transparent;
+}
+
+.story-title {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 10px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.story-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .hero-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-right {
+    position: static;
+    max-width: 100%;
+  }
+
+  .hero-main-title {
+    font-size: 48px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .hero-main-title {
+    font-size: 40px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+}
