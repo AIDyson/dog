@@ -97,6 +97,27 @@ npm start
 
 服务器会自动在 http://localhost:3000 启动
 
+### 1.5 生成“可预览静态版”（无需开发服务器）
+如果你只想要一份可以直接预览/部署的静态网页，请先构建 `build/` 产物：
+
+```bash
+cd client
+npm install
+npm run build
+```
+
+然后用任意静态服务器预览（任选其一）：
+
+```bash
+# 方式A：npx 临时启动静态站点（推荐）
+npx serve -s build -l 3000
+
+# 方式B：用 Python 启动（如果你本机有 Python3）
+python3 -m http.server 3000 --directory build
+```
+
+打开 http://localhost:3000 即可看到最终效果（等同生产环境构建）。
+
 ### 2. 访问网站
 - **首页**: http://localhost:3000
 - **排名列表**: http://localhost:3000/ranking/weekly
